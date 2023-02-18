@@ -1,0 +1,945 @@
+a3=a[8:12]
+a4=a[12:16]
+print('УПРАВЛЕНИЕ: w - вверх , a - влево , s - вниз , d -вправо \n Если вы хотите закончить игру напишите "стоп" \n Если вы выстроили все цифры в правильном порядке напишите "победа"')
+print(a1,a2,a3,a4,sep='\n')
+while True:
+    if a4.count(0)==1:
+        ff = str(input())
+        if ff == 'w': #вверх
+            while a4[k] != 0:
+                k += 1
+            if k==3:
+                aa3.append(a3[k])
+                aa4.append(a4[k])
+                a3.remove(aa3[0])
+                a3.append(aa4[0])
+                a4.remove(aa4[0])
+                a4.append(aa3[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k==2:
+                aa3.append(a3[k])
+                aa3.append(a3[k+1])
+                aa4.append(a4[k])
+                aa4.append(a4[k+1])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.append(aa4[0])
+                a3.append(aa3[1])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.append(aa3[0])
+                a4.append(aa4[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa3.append(a3[k])
+                aa3.append(a3[k + 1])
+                aa3.append(a3[k + 2])
+                aa4.append(a4[k])
+                aa4.append(a4[k + 1])
+                aa4.append(a4[k + 2])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.append(aa4[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.remove(aa4[2])
+                a4.append(aa3[0])
+                a4.append(aa4[1])
+                a4.append(aa4[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa3.append(a3[k])
+                aa3.append(a3[k + 1])
+                aa3.append(a3[k + 2])
+                aa3.append(a3[k + 3])
+                aa4.append(a4[k])
+                aa4.append(a4[k + 1])
+                aa4.append(a4[k + 2])
+                aa4.append(a4[k + 3])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.remove(aa3[3])
+                a3.append(aa4[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                a3.append(aa3[3])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.remove(aa4[2])
+                a4.remove(aa4[3])
+                a4.append(aa3[0])
+                a4.append(aa4[1])
+                a4.append(aa4[2])
+                a4.append(aa4[3])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        elif ff == 'a': #влево
+            while a4[k] != 0:
+                k += 1
+            if k == 3:
+                aa4.append(a4[k-1])
+                a4.remove(aa4[0])
+                a4.append(aa4[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 2:
+                aa4.append(a4[k - 1])
+                aa4.append(a4[k + 1])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.append(aa4[0])
+                a4.append(aa4[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa4.append(a4[k - 1])
+                aa4.append(a4[k + 1])
+                aa4.append(a4[k + 2])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.remove(aa4[2])
+                a4.append(aa4[0])
+                a4.append(aa4[1])
+                a4.append(aa4[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1,a2,a3, a4,sep='\n')
+        elif ff == 'd': #вправо
+            while a4[k] != 0:
+                k += 1
+            if k == 2:
+                aa4.append(a4[k])
+                a4.remove(aa4[0])
+                a4.append(aa4[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa4.append(a4[k])
+                aa4.append(a4[k+2])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.append(aa4[0])
+                a4.append(aa4[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa4.append(a4[k])
+                aa4.append(a4[k + 2])
+                aa4.append(a4[k + 3])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.remove(aa4[2])
+                a4.append(aa4[0])
+                a4.append(aa4[1])
+                a4.append(aa4[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        if ff =='стоп':
+            print('ИГРА ОКОНЧЕНА')
+            break
+        if ff == 'победа':
+            f = open('Spisok.txt', 'wb')
+            tk=(time.time()-t)//1
+            th= tk // 3600
+            tm=tk // 60
+            ts= tk -(th*3600)-(tm*60)
+            s.append(th)
+            s.append(':')
+            s.append(tm)
+            s.append(':')
+            s.append(ts)
+            sp.append('Вы справились за :')
+            sp.append(s)
+            sp.append('ч:м:с')
+            s=[]
+            f.close()
+            break
+    if a3.count(0) == 1:
+        ff = str(input())
+        if ff == 'w':
+            while a3[k] != 0:
+                k += 1
+            if k==3:
+                aa2.append(a2[k])
+                aa3.append(a3[k])
+                a2.remove(aa2[0])
+                a2.append(aa3[0])
+                a3.remove(aa3[0])
+                a3.append(aa2[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k==2:
+                aa2.append(a2[k])
+                aa2.append(a2[k+1])
+                aa3.append(a3[k])
+                aa3.append(a3[k+1])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.append(aa3[0])
+                a2.append(aa2[1])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.append(aa2[0])
+                a3.append(aa3[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa2.append(a2[k])
+                aa2.append(a2[k + 1])
+                aa2.append(a2[k + 2])
+                aa3.append(a3[k])
+                aa3.append(a3[k + 1])
+                aa3.append(a3[k + 2])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.append(aa3[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.append(aa2[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa2.append(a2[k])
+                aa2.append(a2[k + 1])
+                aa2.append(a2[k + 2])
+                aa2.append(a2[k + 3])
+                aa3.append(a3[k])
+                aa3.append(a3[k + 1])
+                aa3.append(a3[k + 2])
+                aa3.append(a3[k + 3])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.remove(aa2[3])
+                a2.append(aa3[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                a2.append(aa2[3])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.remove(aa3[3])
+                a3.append(aa2[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                a3.append(aa3[3])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        elif ff == 'a':
+            while a3[k] != 0:
+                k += 1
+            if k == 3:
+                aa3.append(a3[k-1])
+                a3.remove(aa3[0])
+                a3.append(aa3[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 2:
+                aa3.append(a3[k - 1])
+                aa3.append(a3[k + 1])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.append(aa3[0])
+                a3.append(aa3[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa3.append(a3[k - 1])
+                aa3.append(a3[k + 1])
+                aa3.append(a3[k + 2])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.append(aa3[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1,a2,a3, a4,sep='\n')
+        elif ff == 'd':
+            while a3[k] != 0:
+                k += 1
+            if k == 2:
+                aa3.append(a3[k])
+                a3.remove(aa3[0])
+                a3.append(aa3[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa3.append(a3[k])
+                aa3.append(a3[k+2])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.append(aa3[0])
+                a3.append(aa3[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa3.append(a3[k])
+                aa3.append(a3[k + 2])
+                aa3.append(a3[k + 3])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.append(aa3[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        if ff == 's':
+            while a3[k] != 0:
+                k += 1
+            if k==3:
+                aa4.append(a4[k])
+                aa3.append(a3[k])
+                a4.remove(aa4[0])
+                a4.append(aa3[0])
+                a3.remove(aa3[0])
+                a3.append(aa4[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k==2:
+                aa4.append(a4[k])
+                aa4.append(a4[k+1])
+                aa3.append(a3[k])
+                aa3.append(a3[k+1])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.append(aa3[0])
+                a4.append(aa4[1])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.append(aa4[0])
+                a3.append(aa3[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa4.append(a4[k])
+                aa4.append(a4[k + 1])
+                aa4.append(a4[k + 2])
+                aa3.append(a3[k])
+                aa3.append(a3[k + 1])
+                aa3.append(a3[k + 2])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.remove(aa4[2])
+                a4.append(aa3[0])
+                a4.append(aa4[1])
+                a4.append(aa4[2])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.append(aa4[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa4.append(a4[k])
+                aa4.append(a4[k + 1])
+                aa4.append(a4[k + 2])
+                aa4.append(a4[k + 3])
+                aa3.append(a3[k])
+                aa3.append(a3[k + 1])
+                aa3.append(a3[k + 2])
+                aa3.append(a3[k + 3])
+                a4.remove(aa4[0])
+                a4.remove(aa4[1])
+                a4.remove(aa4[2])
+                a4.remove(aa4[3])
+                a4.append(aa3[0])
+                a4.append(aa4[1])
+                a4.append(aa4[2])
+                a4.append(aa4[3])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.remove(aa3[3])
+                a3.append(aa4[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                a3.append(aa3[3])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        if ff =='стоп':
+            print('ИГРА ОКОНЧЕНА')
+            break
+        if ff == 'победа':
+            f = open('Spisok.txt', 'wb')
+            tk=(time.time()-t)//1
+            th= tk // 3600
+            tm=tk // 60
+            ts= tk -(th*3600)-(tm*60)
+            s.append(th)
+            s.append(':')
+            s.append(tm)
+            s.append(':')
+            s.append(ts)
+            sp.append('Вы справились за :')
+            sp.append(s)
+            sp.append('ч:м:с')
+            s=[]
+            f.close()
+            break
+    if a2.count(0) == 1:
+        ff = str(input())
+        if ff == 'w':
+            while a2[k] != 0:
+                k += 1
+            if k==3:
+                aa1.append(a1[k])
+                aa2.append(a2[k])
+                a1.remove(aa1[0])
+                a1.append(aa2[0])
+                a2.remove(aa2[0])
+                a2.append(aa1[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k==2:
+                aa1.append(a1[k])
+                aa1.append(a1[k+1])
+                aa2.append(a2[k])
+                aa2.append(a2[k+1])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.append(aa2[0])
+                a1.append(aa1[1])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.append(aa1[0])
+                a2.append(aa2[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa1.append(a1[k])
+                aa1.append(a1[k + 1])
+                aa1.append(a1[k + 2])
+                aa2.append(a2[k])
+                aa2.append(a2[k + 1])
+                aa2.append(a2[k + 2])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.remove(aa1[2])
+                a1.append(aa2[0])
+                a1.append(aa1[1])
+                a1.append(aa1[2])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.append(aa1[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa1.append(a1[k])
+                aa1.append(a1[k + 1])
+                aa1.append(a1[k + 2])
+                aa1.append(a1[k + 3])
+                aa2.append(a2[k])
+                aa2.append(a2[k + 1])
+                aa2.append(a2[k + 2])
+                aa2.append(a2[k + 3])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.remove(aa1[2])
+                a1.remove(aa1[3])
+                a1.append(aa2[0])
+                a1.append(aa1[1])
+                a1.append(aa1[2])
+                a1.append(aa1[3])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.remove(aa2[3])
+                a2.append(aa1[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                a2.append(aa2[3])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        elif ff == 'a':
+            while a2[k] != 0:
+                k += 1
+            if k == 3:
+                aa2.append(a2[k-1])
+                a2.remove(aa2[0])
+                a2.append(aa2[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 2:
+                aa2.append(a2[k - 1])
+                aa2.append(a2[k + 1])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.append(aa2[0])
+                a2.append(aa2[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa2.append(a2[k - 1])
+                aa2.append(a2[k + 1])
+                aa2.append(a2[k + 2])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.append(aa2[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1,a2,a3, a4,sep='\n')
+        elif ff == 'd':
+            while a2[k] != 0:
+                k += 1
+            if k == 2:
+                aa2.append(a2[k])
+                a2.remove(aa2[0])
+                a2.append(aa2[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa2.append(a2[k])
+                aa2.append(a2[k+2])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.append(aa2[0])
+                a2.append(aa2[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa2.append(a2[k])
+                aa2.append(a2[k + 2])
+                aa2.append(a2[k + 3])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.append(aa2[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        if ff == 's':
+            while a2[k] != 0:
+                k += 1
+            if k==3:
+                aa3.append(a3[k])
+                aa2.append(a2[k])
+                a3.remove(aa3[0])
+                a3.append(aa2[0])
+                a2.remove(aa2[0])
+                a2.append(aa3[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k==2:
+                aa3.append(a3[k])
+                aa3.append(a3[k+1])
+                aa2.append(a2[k])
+                aa2.append(a2[k+1])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.append(aa2[0])
+                a3.append(aa3[1])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.append(aa3[0])
+                a2.append(aa2[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa3.append(a3[k])
+                aa3.append(a3[k + 1])
+                aa3.append(a3[k + 2])
+                aa2.append(a2[k])
+                aa2.append(a2[k + 1])
+                aa2.append(a2[k + 2])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.append(aa2[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.append(aa3[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa3.append(a3[k])
+                aa3.append(a3[k + 1])
+                aa3.append(a3[k + 2])
+                aa3.append(a3[k + 3])
+                aa2.append(a2[k])
+                aa2.append(a2[k + 1])
+                aa2.append(a2[k + 2])
+                aa2.append(a2[k + 3])
+                a3.remove(aa3[0])
+                a3.remove(aa3[1])
+                a3.remove(aa3[2])
+                a3.remove(aa3[3])
+                a3.append(aa2[0])
+                a3.append(aa3[1])
+                a3.append(aa3[2])
+                a3.append(aa3[3])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.remove(aa2[3])
+                a2.append(aa3[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                a2.append(aa2[3])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        if ff =='стоп':
+            print('ИГРА ОКОНЧЕНА')
+            break
+        if ff == 'победа':
+            f = open('Spisok.txt', 'wb')
+            tk=(time.time()-t)//1
+            th= tk // 3600
+            tm=tk // 60
+            ts= tk -(th*3600)-(tm*60)
+            s.append(th)
+            s.append(':')
+            s.append(tm)
+            s.append(':')
+            s.append(ts)
+            sp.append('Вы справились за :')
+            sp.append(s)
+            sp.append('ч:м:с')
+            s=[]
+            f.close()
+            break
+    if a1.count(0) == 1:
+        ff= str(input())
+        if ff == 'a':
+            while a1[k] != 0:
+                k += 1
+            if k == 3:
+                aa1.append(a1[k-1])
+                a1.remove(aa1[0])
+                a1.append(aa1[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 2:
+                aa1.append(a1[k - 1])
+                aa1.append(a1[k + 1])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.append(aa1[0])
+                a1.append(aa1[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa1.append(a1[k - 1])
+                aa1.append(a1[k + 1])
+                aa1.append(a1[k + 2])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.remove(aa1[2])
+                a1.append(aa1[0])
+                a1.append(aa1[1])
+                a1.append(aa1[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1,a2,a3, a4,sep='\n')
+        elif ff == 'd':
+            while a1[k] != 0:
+                k += 1
+            if k == 2:
+                aa1.append(a1[k])
+                a1.remove(aa1[0])
+                a1.append(aa1[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa1.append(a1[k])
+                aa1.append(a1[k+2])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.append(aa1[0])
+                a1.append(aa1[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa1.append(a1[k])
+                aa1.append(a1[k + 2])
+                aa1.append(a1[k + 3])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.remove(aa1[2])
+                a1.append(aa1[0])
+                a1.append(aa1[1])
+                a1.append(aa1[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        if ff == 's':
+            while a1[k] != 0:
+                k += 1
+            if k==3:
+                aa2.append(a2[k])
+                aa1.append(a1[k])
+                a2.remove(aa2[0])
+                a2.append(aa1[0])
+                a1.remove(aa1[0])
+                a1.append(aa2[0])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k==2:
+                aa2.append(a2[k])
+                aa2.append(a2[k+1])
+                aa1.append(a1[k])
+                aa1.append(a1[k+1])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.append(aa1[0])
+                a2.append(aa2[1])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.append(aa2[0])
+                a1.append(aa1[1])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 1:
+                aa2.append(a2[k])
+                aa2.append(a2[k + 1])
+                aa2.append(a2[k + 2])
+                aa1.append(a1[k])
+                aa1.append(a1[k + 1])
+                aa1.append(a1[k + 2])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.append(aa1[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.remove(aa1[2])
+                a1.append(aa2[0])
+                a1.append(aa1[1])
+                a1.append(aa1[2])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            elif k == 0:
+                aa2.append(a2[k])
+                aa2.append(a2[k + 1])
+                aa2.append(a2[k + 2])
+                aa2.append(a2[k + 3])
+                aa1.append(a1[k])
+                aa1.append(a1[k + 1])
+                aa1.append(a1[k + 2])
+                aa1.append(a1[k + 3])
+                a2.remove(aa2[0])
+                a2.remove(aa2[1])
+                a2.remove(aa2[2])
+                a2.remove(aa2[3])
+                a2.append(aa1[0])
+                a2.append(aa2[1])
+                a2.append(aa2[2])
+                a2.append(aa2[3])
+                a1.remove(aa1[0])
+                a1.remove(aa1[1])
+                a1.remove(aa1[2])
+                a1.remove(aa1[3])
+                a1.append(aa2[0])
+                a1.append(aa1[1])
+                a1.append(aa1[2])
+                a1.append(aa1[3])
+                aa1 = []
+                aa2 = []
+                aa3 = []
+                aa4 = []
+                k = 0
+            print(a1, a2, a3, a4, sep='\n')
+        if ff =='стоп':
+            print('ИГРА ОКОНЧЕНА')
+            break
+        if ff == 'победа':
+            f = open('Spisok.txt', 'wb')
+            tk=(time.time()-t)//1
+            th= tk // 3600
+            tm=tk // 60
+            ts= tk -(th*3600)-(tm*60)
+            s.append(th)
+            s.append(':')
+            s.append(tm)
+            s.append(':')
+            s.append(ts)
+            sp.append('Вы справились за :')
+            sp.append(s)
+            sp.append('ч:м:с')
+            s=[]
+            f.close()
+            break
+if ff == 'победа':
+    f=open('Spisok.txt','rb')
+    print(sp)
+    f.close()
